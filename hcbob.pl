@@ -34,7 +34,8 @@ $response = $ua->post($login_url,
 =cut
 
 if ( $response->is_success ) {
-    print $response->decoded_content;
+    print $response->decoded_content((charset => 'utf-8'));
+    #$res->decoded_content((charset => 'utf-8'));
 }
 else {
     die $response->status_line;
