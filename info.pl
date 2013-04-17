@@ -16,6 +16,7 @@ my $base_url = 'http://www.welstory.com/main.jsp';
 my $week3_url = 'http://www.welstory.com/mywelstory/restaurant/weekMenu.jsp?mMode=21&sDate=2013-04-07&hall_no=E1B7';
 my $html = 'welstory.html';
 
+=pod
 my $ua = LWP::UserAgent->new;
 my $response;
 my $cookies = new HTTP::Cookies;
@@ -30,6 +31,7 @@ if ( $response->is_success ) {
 else {
     die $response->status_line;
 }
+=cut
 my $day_p = HTML::TokeParser::Simple->new( $html );
 my @days;
 my @seq_days;
@@ -106,39 +108,88 @@ my $american_cnt = 1;
 my $inter_cnt = 1;
 my $noodle_cnt = 1;
 my $inter2_cnt = 1;
+my $course_cnt = 1;
+my $kcal_cnt =1;
 
-foreach my $today (@seq_days) {
-    print "$today\n";
-    foreach my $today_course (@course) {
-        print "$today_course\n";
-        if ( $today_course eq 'korean' ) {
-            foreach my $today_food (@foods) {
-                if ( $korean_cnt == 1 ) {
-                    push @kor_breakfast, ($today_food);
-                    if ( $today_food eq 'kcal' ) {
-                        $korean_cnt++;
+for (; $course_cnt <= 25; $course_cnt++) {
+    if ( $course_cnt <= 5  ) {
+            foreach my $today_food ( @foods ) {
+                if ( $kcal_cnt == 1 ) {
+                    if ( $today_food =~ /kcal$/ ) {
+                        $kcal_cnt++;
                     }
-                elsif ( $korean_cnt == 2 ) {
-                    push @kor_lunch, ($today_course, $today_food);
-                    if ( $today_food eq 'kcal' ) {
-                        $korean_cnt++;
+                    else {
+                        push @kor_breakfast, $today_food;
                     }
                 }
-                elsif ( $korean_cnt == 3 ) {
-                    push @kor_dinner, ($today_course, $today_food);
-                    if ( $today_food eq 'kcal' ) {
-                        $korean_cnt++;
+                elsif ( $kcal_cnt == 2 ) {
+                    if ( $today_food =~ /kcal$/ ) {
+                        $kcal_cnt++;
+                    }
+                    else {
+                        push @kor_lunch, $today_food;
                     }
                 }
-                elsif ( $korean_cnt == 4 ) {
-                    push @kor_temp, ($today_course, $today_food);
-                    if ( $today_food eq 'kcal' ) {
-                        $korean_cnt++;
+                elsif ( $kcal_cnt == 3 ) {
+                    if ( $today_food =~ /kcal$/ ) {
+                        $kcal_cnt++;
+                    }
+                    else {
+                        push @kor_dinner, $today_food;
+                    }
+                }
+                elsif ( $kcal_cnt == 4 ) {
+                    if ( $today_food =~ /kcal$/ ) {
+                        $kcal_cnt++;
+                    }
+                    else {
+                        push @kor_temp, $today_food;
                     }
                 }
             }
         }
-    }
+=pod
+    elsif ( $course_cnt <= 10  ) {
+            foreach my $today_food ( @foods ) {
+                if ( $kcal_cnt == 5 ) {
+                    if ( $today_food =~ /kcal$/ ) {
+                        $kcal_cnt++;
+                    }
+                    else {
+                        push @ame_breakfast, $today_food;
+                    }
+                }
+                elsif ( $kcal_cnt == 6 ) {
+                    if ( $today_food =~ /kcal$/ ) {
+                        $kcal_cnt++;
+                    }
+                    else {
+                        push @ame_lunch, $today_food;
+                    }
+                }
+                elsif ( $kcal_cnt == 7 ) {
+                    if ( $today_food =~ /kcal$/ ) {
+                        $kcal_cnt++;
+                    }
+                    else {
+                        push @ame_dinner, $today_food;
+                    }
+                }
+                elsif ( $kcal_cnt == 8 ) {
+                    if ( $today_food =~ /kcal$/ ) {
+                        $kcal_cnt++;
+                    }
+                    else {
+                        push @ame_temp, $today_food;
+                    }
+                }
+            }
+        }
+=cut
 }
-#print "@kor_breakfast\n";
-#print "@foods\n";
+
+print "@kor_breakfast\n";
+print "@kor_lunch\n";
+print "@kor_dinner\n";
+print "@kor_temp\n";
+print "@ame_breakfast\n";

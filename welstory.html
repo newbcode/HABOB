@@ -1,0 +1,3229 @@
+
+
+
+
+
+
+
+
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	function ieExecWB(printDiv) {
+	  Pwin = window.open("","","width=600,height=600,scrollbars=1");
+	  wdata ="<HTML>";
+	  wdata += "<link href=\"/css/style.css\" rel=\"stylesheet\" type=\"text/css\">"
+	  wdata += document.all[printDiv].innerHTML
+	  wdata += "";
+	  Pwin.document.write(wdata);
+	  Pwin.window.print();
+	  Pwin.window.location.reload();
+	}
+
+//-->
+
+</SCRIPT>
+
+<iframe name="printiFrame" id="printiFrame" src="" width="0" height="0" frameborder="0" scrolling="no"></iframe>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>
+<head>
+
+<script language="javascript" src="/js/community/community.js"></script>
+<!--script src="/modules/TrustNet/SecuiPKIScript.js"></script-->
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta http-equiv="imagetoolbar" content="no">
+<title>:: Welstory ::</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+<script language="javascript" type="text/javascript" src="/css/script.js"></script>
+<script language="javascript" src="/js/global.js"></script>
+<script type="text/javascript">
+
+	function ieExecWB(printDiv) {
+	  Pwin = window.open("","","width=600,height=600,scrollbars=1");
+	  wdata ="<HTML>";
+	  wdata += "<link href=\"/css/style.css\" rel=\"stylesheet\" type=\"text/css\">"
+	  wdata += document.all[printDiv].innerHTML
+	  wdata += "";
+	  Pwin.document.write(wdata);
+	  Pwin.window.print();
+	  Pwin.window.location.reload();
+	}
+</script>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+<script language="javascript">
+function quickMenuOpen(login_state){
+	if(login_state == "true"){
+		var Durl;
+		
+		Durl = location.href;
+		
+		if(~Durl.indexOf('https//')){
+			window.open("http://www.welstory.com/common/quickedit.jsp", "quickedit", "width=350,height=277");
+		}else{
+			window.open("https://www.welstory.com:3443/common/quickedit.jsp", "quickedit", "width=350,height=277");
+		}
+	}else{
+		location.href = "http://www.welstory.com/common/login.jsp";
+	}
+}
+function quickDiary(){
+	location.href = "http://www.welstory.com/mywelstory/myDiary.jsp?mMode=31";
+	//window.open("/mywelstory/diary/index.jsp","mydiary","width=800,height=600, toolbar=no,scrollbars=auto,resizable=yes,copyhistory=no");
+}
+</script>
+<!--// Quick Menu -->
+<div id=divMenu style="position:absolute; visibility:visible; z-index:3; left:854; top:230; width:95;">
+	<table width="95" border="0" cellspacing="0" cellpadding="0">
+
+		<tr>
+			<td><img src="/img/common/qm_top.gif"></td>
+		</tr>
+
+
+        <tr>
+          <td><a href="http://www.welstory.com/wellbeingstory/menudiy/myMenuMake.jsp?mMode=13" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('/qm_menu_menudiy','','/img/common/qm_menu_menudiy_on.gif',1)"><img src="/img/common/qm_menu_menudiy_off.gif" name="/qm_menu_menudiy"></a></td>
+        </tr>
+
+
+		 <tr>
+          <td><img src="/img/common/qm_line.gif"></td>
+        </tr>
+
+
+        <tr>
+          <td><a href="javascript:quickDiary();" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('/qm_menu_healthdiary','','/img/common/qm_menu_healthdiary_on.gif',1)"><img src="/img/common/qm_menu_healthdiary_off.gif" name="/qm_menu_healthdiary"></a></td>
+        </tr>
+
+
+		 <tr>
+          <td><img src="/img/common/qm_line.gif"></td>
+        </tr>
+
+
+        <tr>
+          <td><a href="http://www.welstory.com/helpdesk/unitedvoc/vocWrite.jsp?mMode=21" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('/qm_menu_voc','','/img/common/qm_menu_voc_on.gif',1)"><img src="/img/common/qm_menu_voc_off.gif" name="/qm_menu_voc"></a></td>
+        </tr>
+
+
+        <tr>
+			<td><img src="/img/common/qm_bottom01.gif"></td>
+		</tr>
+		<tr>
+			<td>
+				<table width="113" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td><img src="/img/common/qm_bg01.gif"></td>
+						<td><img src="/img/common/qm_btn_modify.gif" onClick="quickMenuOpen('true')" style="cursor:hand"></td>
+						<td width="5"></td>
+						<td><a href="#top01"><img src="/img/common/qm_btn_top.gif"></a></td>
+						<td><img src="/img/common/qm_bg02.gif"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr><td><img src="/img/common/qm_bottom02.gif"></td></tr>
+		<tr>
+			<td style="padding-left:6px;">
+				<table cellpadding="0" cellspacing="0" border="0">
+				<!-- [s]120418수정 : 홍보영상 배너추가 -->
+				<tr>
+					<td style="padding:10px 0 14px 0;">
+					<a href="http://www.welstory.com/welstory/news/vod.jsp?mMode=55"><img src="http://www.welstory.com/img/common/banner_publicity.gif" alt="홍보영상" border="0"></a>
+					<a style="display:inline-block; margin-top:5px; font-size:0; line-height:0; vertical-align:top;"  href="http://www.samsungeverland.com/main.html" target="_blank"><img src="http://www.welstory.com/img/common/brandsite_banner.jpg" alt="삼성에버랜드 기업사이트 바로가기" border="0"></a></td>
+				</tr>
+				<!-- [e]120418수정 -->
+				<tr>
+					<td >
+						<img src="http://www.welstory.com/img/common/welstory_social_banner.jpg" alt="" border="0" usemap="#SocialMap">
+						<map name="SocialMap">
+							<area shape="rect" coords="7,7,45,60" href="http://twitter.com/witheverland" target="_blank">
+							<area shape="rect" coords="56,7,92,63" href="http://www.facebook.com/witheverland" target="_blank">
+							<area shape="rect" coords="6,69,48,129" href="http://www.youtube.com/witheverland" target="_blank">
+							<area shape="rect" coords="54,69,94,140" href="http://www.flickr.com/photos/witheverland" target="_blank">
+						</map>
+					</td>
+				</tr>
+				<tr>
+				<!-- [s]120418수정 : 이미지수정 -->
+				<td><img src="http://www.welstory.com/img/common/qm_malllogo.jpg" border="0"></td>
+				</tr>
+				<tr><td height="5"></td></tr>
+				<tr>
+				<td><a href="http://www.welstorymall.com/"><img src="http://www.welstory.com/wimg/wing_banner.jpg" alt="웰스토리몰바로가기" border="0"></a></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+    </table>
+</div>
+<script language="JavaScript">
+<!--
+var bNetscape4plus = (navigator.appName == "Netscape" && navigator.appVersion.substring(0,1) >= "4");
+var bExplorer4plus = (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.substring(0,1) >= "4");
+function CheckUIElements(){
+var yMenuFrom, yMenuTo, yButtonFrom, yButtonTo, yOffset, timeoutNextCheck;
+
+if ( bNetscape4plus ) {
+yMenuFrom   = document["divMenu"].top;
+yMenuTo     = top.pageYOffset + 62;
+}
+else if ( bExplorer4plus ) {
+yMenuFrom   = parseInt (divMenu.style.top, 10);
+yMenuTo     = document.body.scrollTop + 10;
+if (yMenuTo < 245) { yMenuTo = 245; }
+}
+
+timeoutNextCheck = 245;
+
+if ( Math.abs (yButtonFrom - (yMenuTo + 152)) < 6 && yButtonTo < yButtonFrom ) {
+setTimeout ("CheckUIElements()", timeoutNextCheck);
+return;
+}
+
+if ( yButtonFrom != yButtonTo ) {
+yOffset = Math.ceil( Math.abs( yButtonTo - yButtonFrom ) / 10 );
+if ( yButtonTo < yButtonFrom )
+yOffset = -yOffset;
+
+if ( bNetscape4plus )
+document["divLinkButton"].top += yOffset;
+else if ( bExplorer4plus )
+divLinkButton.style.top = parseInt (divLinkButton.style.top, 10) + yOffset;
+
+timeoutNextCheck = 10;
+}
+if ( yMenuFrom != yMenuTo ) {
+yOffset = Math.ceil( Math.abs( yMenuTo - yMenuFrom ) / 20 );
+if ( yMenuTo < yMenuFrom )
+yOffset = -yOffset;
+
+if ( bNetscape4plus )
+document["divMenu"].top += yOffset;
+else if ( bExplorer4plus )
+divMenu.style.top = parseInt (divMenu.style.top, 10) + yOffset ;
+timeoutNextCheck = 10;
+}
+
+setTimeout ("CheckUIElements()", timeoutNextCheck);
+}
+
+function OnLoad()
+{
+var y;
+if ( top.frames.length )
+if ( bNetscape4plus ) {
+document["divMenu"].top = top.pageYOffset + 100;
+document["divMenu"].visibility = "visible";
+}
+else if ( bExplorer4plus ) {
+divMenu.style.top = document.body.scrollTop + 100;
+divMenu.style.visibility = "visible";
+}
+CheckUIElements();
+return true;
+}
+OnLoad();
+//-->
+</script>
+<!-- Quick Menu //-->
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="225" valign="top">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td height="85" align="right" valign="bottom" style="padding:0 30 10 0;"><a href="http://www.welstory.com/main.jsp"><img src="/img/common/top_logo.gif" style="cursor:hand"></a></td>
+	</tr>
+	<tr>
+		<td><img src="/img/common/sub_menutop_mywelstory.gif"></td>
+	</tr>
+	<tr>
+		<td height="714" valign="top" background="/img/common/sub_menu_bg.gif" style="padding:10 0 0 15;">
+			<!--// Sub Menu -->
+
+
+		<table width="140" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td height="6"></td>
+			</tr>
+			<tr>
+				<td><img src="/img/common/sub_menu_04My-Welstory_01_on.gif">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="3"></td>
+							</tr>
+							<tr>
+								<td><img src="/img/common/sub_menu_04My-Welstory_01_01_on.gif">
+								</td>
+							</tr>
+							<tr>
+								<td><a href="http://www.welstory.com/mywelstory/restaurant/vocWrite.jsp?mMode=22" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('sm_MyWelstory_01_02','','/img/common/sub_menu_04My-Welstory_01_02_on.gif',1)"><img src="/img/common/sub_menu_04My-Welstory_01_02_off.gif" name="sm_MyWelstory_01_02"></a></td>
+							</tr>
+							<tr>
+								<td height="3"></td>
+							</tr>
+						</table>
+				</td>
+			</tr>
+			<tr>
+				<td height="6"></td>
+			</tr>
+			<tr>
+				<td height="1" bgcolor="e2f756"></td>
+			</tr>
+			<tr>
+				<td height="6"></td>
+			</tr>
+			<!--
+			<tr>
+				<td><a href="/mywelstory/measure/keyInBodyEleForm.jsp?mMode=31" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('sm_MyWelstory_02','','/img/common/sub_menu_04My-Welstory_02_on.gif',1)"><img src="/img/common/sub_menu_04My-Welstory_02_off.gif" name="sm_MyWelstory_02"></a></td>
+			</tr>
+			<tr>
+				<td height="6"></td>
+			</tr>
+			<tr>
+				<td height="1" bgcolor="e2f756"></td>
+			</tr>
+			<tr>
+				<td height="6"></td>
+			</tr>
+			-->
+			<tr>
+				<td><a href="javascript:myDiary();" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('sm_MyWelstory_03','','/img/common/sub_menu_04My-Welstory_03_on.gif',1)"><img src="/img/common/sub_menu_04My-Welstory_03_off.gif" name="sm_MyWelstory_03"></a></td>
+			</tr>
+			<tr>
+				<td height="6"></td>
+			</tr>
+			<tr>
+				<td height="1" bgcolor="e2f756"></td>
+			</tr>
+			<tr>
+				<td height="6"></td>
+			</tr>
+			<tr>
+				<td><a href="https://www.welstory.com:3443/getMember4UpdateAction.do" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('sm_MyWelstory_04','','/img/common/sub_menu_04My-Welstory_04_on.gif',1)"><img src="/img/common/sub_menu_04My-Welstory_04_off.gif" name="sm_MyWelstory_04"></a></td>
+			</tr>
+			<tr>
+				<td height="6"></td>
+			</tr>
+			<tr>
+				<td height="1" bgcolor="e2f756"></td>
+			</tr>
+			<!--
+			<tr>
+				<td height="6"></td>
+			</tr>
+			<tr>
+				<td><a href="/mywelstory/specialist/discussionList.jsp?mMode=61" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('sm_MyWelstory_05','','/img/common/sub_menu_04My-Welstory_05_on.gif',1)"><img src="/img/common/sub_menu_04My-Welstory_05_off.gif" name="sm_MyWelstory_05"></a></td>
+			</tr>
+			<tr>
+				<td height="6"></td>
+			</tr>
+			<tr>
+				<td height="1" bgcolor="e2f756"></td>
+			</tr>
+			-->
+		</table>
+
+
+
+
+			<!-- Sub Menu //-->
+		</td>
+	</tr>
+	<tr>
+		<td height="50"></td>
+	</tr>
+</table>
+<script type="text/javascript">
+	function myDiary(){
+		location.href = "http://www.welstory.com/mywelstory/myDiary.jsp?mMode=41";
+		//window.open("/mywelstory/diary/index.jsp","mydiary","width=800,height=600, toolbar=no,scrollbars=auto,resizable=yes,copyhistory=no");
+	}
+</script>
+
+		</td>
+		<td width="40"></td>
+		<td width="554" valign="top">
+			<script type="text/javascript">	urlConfig = {		http: 'http://www.welstory.com',		https: 'https://www.welstory.com:3443'	}</script><script language="javascript" src="/js/menu/top.js"></script>
+<script type="text/javascript">
+	function swfDiary(){
+		if (true) {
+			window.open("http://www.welstory.com/mywelstory/diary/index.jsp","mydiary","width=800,height=600, toolbar=no,scrollbars=auto,resizable=yes,copyhistory=no");
+		} else {
+			alert("회원 전용 서비스입니다.");
+			location.href	= "/common/login.jsp";
+		}
+	}
+	String.prototype.trim = function() {
+	  return this.replace(/(^\s*)|(\s*$)/g, "");
+	 }
+	function check_text(){
+
+		var str = document.frm_search.search_word.value;
+		//document.frm.search_word.value = Trim(str);
+		document.frm_search.search_word.value = str.trim();
+		if(document.frm_search.search_word.value  == ""){
+			alert("검색어를 입력해주세요");
+			document.frm_search.search_word.focus();
+			return;
+		}else{
+			document.frm_search.action = "http://www.welstory.com/helpdesk/totalsearch/totalSearch.jsp?mMode=4";
+			document.frm_search.submit();
+		}
+	}
+
+	function CheckEnt(urlname){
+		if (event.keyCode == 13) {
+			if(!check_text()){
+				return;
+			}
+		}else{
+			return;
+		}
+	}
+</script>
+<a name="top01"></a>
+
+<p style="margin-top:9px;">
+<!--// Top Menu -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td align="right">
+		<img src="/img/common/sub_topmenu_dot_yline.gif" hspace="2" align="absmiddle">
+     	
+     	강윤창님
+		<img src="/img/common/sub_topmenu_dot_yline.gif" hspace="2" align="absmiddle">
+		<img src="/img/common/sub_topmenu_logout.gif" align="absmiddle" onClick="logout();" style="cursor:hand">
+     	
+		<img src="/img/common/sub_topmenu_dot_yline.gif" hspace="2" align="absmiddle">
+		<a href="http://www.welstory.com/helpdesk/faq/faqList.jsp?mMode=11"><img src="/img/common/sub_topmenu_helpdesk.gif" align="absmiddle"></a>
+		<img src="/img/common/sub_topmenu_dot_yline.gif" hspace="2" align="absmiddle">
+		<a href="http://www.welstory.com/helpdesk/sitemap/siteMapList.jsp?mMode=41"><img src="/img/common/sub_topmenu_sitemap.gif" align="absmiddle"></a>
+		</td>
+		<td width="13" align="center"><img src="/img/common/yline03.gif" width="1" height="10"></td>
+
+		<td width="169">
+			<form name=frm_search >
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="42"><img src="/img/common/sub_txt_total_search.gif"></td>
+					<td width="80">
+						<input type="text" name="search_word" id="search_word" style="width:80; height:15;border:solid 1;border-color:dddddd;" onKeyDown="CheckEnt(this.value)">
+					</td>
+					<td width="3">&nbsp;</td>
+					<td><a href="javascript:check_text();"><img src="/img/common/sub_btn_top_search.gif"></a></td>
+				</tr>
+			</table>
+			</form>
+		</td>
+
+		<td width="13" align="center"><img src="/img/common/yline03.gif" width="1" height="10"></td>
+		<td width="1">
+			<table border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td><img src="/img/common/sub_btn_golink.gif" onclick="divHideShow();" style="cursor:hand"></td>
+				</tr>
+			</table>
+			<div id="golink" style="position:absolute; width:144px; z-index:2" style="DISPLAY: none">
+				<p style="margin-top:1px;">
+				<table width="144" border="0" cellspacing="0" cellpadding="0" style="border:solid 1;border-color:dddddd;">
+					<tr>
+						<td  bgcolor="ffffff" style="color:a19685; padding:3 5 1 5; cursor:hand;" class="d 11" onMouseover="this.style.backgroundColor='#f5f5f5'" onMouseout="this.style.backgroundColor='#ffffff'" onclick=location.href="http://www.welstory.com/welstory/biz/counselEmail.jsp?mMode=23">급식소 위탁상담</td>
+					</tr>
+					<tr>
+						<td  bgcolor="ffffff" style="color:a19685; padding:3 5 1 5; cursor:hand;" class="d 11" onMouseover="this.style.backgroundColor='#f5f5f5'" onMouseout="this.style.backgroundColor='#ffffff'" onclick=location.href="http://www.welstory.com/welstory/biz/counselEmail.jsp?mMode=23">식자재 납품문의</td>
+					</tr>
+					<tr>
+						<td  bgcolor="ffffff" style="color:a19685; padding:3 5 1 5; cursor:hand;" class="d 11" onMouseover="this.style.backgroundColor='#f5f5f5'" onMouseout="this.style.backgroundColor='#ffffff'" onclick=location.href="http://www.welstory.com/welstory/biz/guideMap.jsp?mMode=35">회사위치</td>
+					</tr>
+					<tr>
+						<td  bgcolor="ffffff" style="color:a19685; padding:3 5 1 5; cursor:hand;" class="d 11" onMouseover="this.style.backgroundColor='#f5f5f5'" onMouseout="this.style.backgroundColor='#ffffff'" onclick=location.href="http://www.welstory.com/welstory/biz/recruitList.jsp?mMode=34">채용정보</td>
+					</tr>
+					<tr>
+						<td  bgcolor="ffffff" style="color:a19685; padding:3 5 1 5; cursor:hand;" class="d 11" onMouseover="this.style.backgroundColor='#f5f5f5'" onMouseout="this.style.backgroundColor='#ffffff'" onclick=location.href="http://www.welstory.com/helpdesk/unitedvoc/vocWrite.jsp?mMode=21">VOC(고객의 소리)</td>
+					</tr><!--
+					<tr>
+						<td  bgcolor="ffffff" style="color:a19685; padding:3 5 1 5; cursor:hand;" class="d 11" onMouseover="this.style.backgroundColor='#f5f5f5'" onMouseout="this.style.backgroundColor='#ffffff'" onclick=location.href="http://www.welstory.com/wellbeingstory/gotoprogram/programGuide.jsp?mMode=31">gotowell program</td>
+					</tr>
+					<tr>
+						<td  bgcolor="ffffff" style="color:a19685; padding:3 5 1 5; cursor:hand;" class="d 11" onMouseover="this.style.backgroundColor='#f5f5f5'" onMouseout="this.style.backgroundColor='#ffffff'" onclick=location.href="http://www.welstory.com/wellbeingstory/appraisal/dietQNA.jsp?mMode=23">건강상담하기</td>
+					</tr> -->
+					<tr>
+						<td  bgcolor="ffffff" style="color:a19685; padding:3 5 1 5; cursor:hand;" class="d 11" onMouseover="this.style.backgroundColor='#f5f5f5'" onMouseout="this.style.backgroundColor='#ffffff'" onclick=location.href="http://www.welstory.com/wellbeingstory/hotinfo/index.jsp?mMode=41">건강컨텐츠</td>
+					</tr>
+				</table>
+			</div>
+		</td>
+	</tr>
+</table>
+<!-- Top Menu //-->
+
+<p style="margin-top:41px;">
+
+<script src="/swf/AC_RunActiveContent.js" language="javascript"></script>
+<!--// GNB -->
+<div id="flash_gnb">
+<script language="javascript">
+	if (AC_FL_RunContent == 0) {
+		alert("This page requires AC_RunActiveContent.js.");
+	} else {
+		AC_FL_RunContent(
+			'codebase', 'https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0',
+			'width', '553',
+			'height', '78',
+			'src', '/swf/gnb',
+			'quality', 'high',
+			'pluginspage', 'https://www.macromedia.com/go/getflashplayer',
+			'align', 'middle',
+			'play', 'true',
+			'loop', 'true',
+			'scale', 'showall',
+			'devicefont', 'false',
+			'id', '/swf/gnb',
+			'bgcolor', '#ffffff',
+			'name', '/swf/gnb',
+			'menu', 'true',
+			'allowFullScreen', 'false',
+			'allowScriptAccess','sameDomain',
+			'wmode', 'transparent',
+			'movie', '/swf/gnb',
+			'salign', '',
+			'FLASHVARS','activeCode=D01'
+			); //end AC code
+	}
+</script>
+</div>
+<!-- GNB //-->
+
+<p style="margin-top:20px;">
+			<!--// History -->
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="1"><img src="/img/common/history_bg_left.gif"></td>
+					<td align="right" bgcolor="f5f5f5" style="padding-top:3px;" class="verdana 11"><img src="/img/common/history_bul.gif"> Home &gt; My Welstory &gt; <b class="72634d">오늘의 메뉴</b></td>
+					<td width="1"><img src="/img/common/history_bg_right.gif"></td>
+				</tr>
+			</table>
+			<!-- History //-->
+
+			<p style="margin-top:20px;">
+
+			<!--// 서브타이틀 -->
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td><img src="/img/common/bul_stit.gif"><img src="/img/common/x.gif" width="10" height="1"><img src="/img/mywelstory/tit_todaymenu.gif"><img src="/img/common/x.gif" width="8" height="1"><img src="/img/common/yline01.gif"><img src="/img/common/x.gif" width="8" height="1"><img src="/img/mywelstory/txt_todaymenu.gif"></td>
+				</tr>
+				<tr>
+					<td height="8"></td>
+				</tr>
+				<tr>
+					<td height="1" bgcolor="bbc32f"></td>
+				</tr>
+			</table>
+			<!-- 서브타이틀 //-->
+			<p style="margin-top:20px;">
+
+			<!--// tab menu '전체보기' -->
+			
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="10"></td>
+					<td width="1"><img src="/img/mywelstory/tab_oures_01_on.gif"></td>
+					<td width="3"></td>
+					
+					<td>&nbsp;</td>
+				</tr>
+			</table>
+			<table border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="13" height="3" bgcolor="bbc32f"></td>
+					<td width="94"></td>
+					<td width="447" bgcolor="bbc32f"></td>
+				</tr>
+			</table>
+			<!-- tab menu '전체보기' //-->
+
+			<p style="margin-top:20px;">
+
+			<!--// 컨텐츠 -->
+
+			<!--// 게시판목록 타이틀 -->
+			<!--// 검색 -->
+
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>&nbsp;&nbsp;&nbsp;<b>■Welstory는 "국내산 쌀"과"배추김치(배추:국내산),포기김치(배추:국내산)"만 사용합니다</b></td>
+				</tr>
+			
+				<tr>
+					<td height="40" background="/img/common/bbs_serchbg.gif">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="21"></td>
+								<td width="408" class="verdana 11 72634d"><img src="/img/common/bul_01.gif" align="absmiddle"> 기간 : <a href="javascript:prevWEEK('1364655600000');">◀</a> 2013-04-01 ~ 2013-04-07<a href="javascript:nextWEEK('1365865200000');">▶</a></td>
+								<td width="104">
+									<form name="mysearchform"  method="post">
+									<input type='hidden' name="sDate_millis" value="1365260400000">
+									<select name="hall_no" id="hall_no" style="width:150px;" onchange="document.mysearchform.submit();">
+										<option>영업장선택</option>
+									
+										<option value="E1B7" selected>코리아벤쳐타운</option>
+									
+									</select>
+									</form>
+								</td>
+								<td width="20"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<!-- 검색 //-->
+			<p style="margin-top:20px;">
+
+			<!-- 게시판목록 타이틀 //-->
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td><img src="/img/mywelstory/stit_menu_print.gif" alt="" border="0"></td>
+				<td align="right"><img src="/img/mywelstory/btn_save_exel.gif" style="margin-right:3px;" onClick="saveExcel();" style="cursor:hand"><img src="/img/mywelstory/btn_menutb_print.gif" onClick="ieExecWB('div1');" style="cursor:hand"></td>
+			</tr>
+			<tr><td height="7"></td></tr>
+			</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" >
+				<tr>
+					<td height="26" background="/img/common/bbs_topbg.gif">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="10"></td>
+								<td width="52" align="center"><img src="/img/common/txt_bbs_day01.gif"></td>
+								<td width="1"><img src="/img/common/bbs_yline.gif"></td>
+								<td width="50" align="center"><img src="/img/common/txt_bbs_course.gif"></td>
+								<td width="1"><img src="/img/common/bbs_yline.gif"></td>
+								<td width="109" align="center"><img src="/img/common/txt_bbs_bf.gif"></td>
+								<td width="1"><img src="/img/common/bbs_yline.gif"></td>
+								<td width="109" align="center"><img src="/img/common/txt_bbs_lunch.gif"></td>
+								<td width="1"><img src="/img/common/bbs_yline.gif"></td>
+								<td width="109" align="center"><img src="/img/common/txt_bbs_dinner.gif"></td>
+								<td width="1"><img src="/img/common/bbs_yline.gif"></td>
+								<td width="105" align="center"><img src="/img/common/txt_bbs_night_food.gif"></td>
+								<td width="5"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<!-- 게시판목록 타이틀 //-->
+
+			<!--// 게시판목록 -->
+			<div id="div1">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<!-- // loof -->
+				
+				<tr>
+					<td width="10"></td>
+					<td width="52" align="center" valign="middle" class="14 b 72634D" style="border-right:1px solid #E5E0D9; border-bottom:1px solid #E5E0D9;">
+					월
+					</td>
+					<td>
+						<!-- // loof -->
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #E5E0D9;">
+						<tr>
+							<td width="55" align="center" valign="middle" bgcolor="#F6F8E6" style="border-right:1px solid #E5E0D9;"><font class="BBC32F" style="font-size:12; font-family:Arial black;">korean</font></td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ쇠고기대파해장국</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ비엔나소시지케첩볶음</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ깻잎지절임</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ포기김치</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ쌀밥</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">703</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ설렁탕</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ오징어김치전</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ도토리묵&양념장</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ마늘종고추장무침</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ깍두기</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ쌀밥</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">735</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ뚝배기삼겹살김치찌개</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ모둠햄케첩볶음</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ모둠채소전</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ상추겉절이</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ포기김치</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ쌀밥</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">714</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="105" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #E5E0D9;">
+						<tr>
+							<td width="55" align="center" valign="middle" bgcolor="#F6F8E6" style="border-right:1px solid #E5E0D9;"><font class="BBC32F" style="font-size:12; font-family:Arial black;">american</font></td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ즉석라면</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ단무지</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ쌀밥</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ포기김치</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">717</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="105" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #E5E0D9;">
+						<tr>
+							<td width="55" align="center" valign="middle" bgcolor="#F6F8E6" style="border-right:1px solid #E5E0D9;"><font class="BBC32F" style="font-size:12; font-family:Arial black;">inter</font></td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ크림스프</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ아쿠아돈가스</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ오이피클</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ깍두기</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ쌀밥</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">736</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="105" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #E5E0D9;">
+						<tr>
+							<td width="55" align="center" valign="middle" bgcolor="#F6F8E6" style="border-right:1px solid #E5E0D9;"><font class="BBC32F" style="font-size:12; font-family:Arial black;">noodle</font></td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ사각어묵국</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ쫄면</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ핫도그</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ김가루양념밥</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ깍두기</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">653</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ팽이버섯장국</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ해물볶음우동</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ고구마튀김</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ김가루양념밥</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ단무지</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ포기김치</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">771</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="105" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #E5E0D9;">
+						<tr>
+							<td width="55" align="center" valign="middle" bgcolor="#F6F8E6" style="border-right:1px solid #E5E0D9;"><font class="BBC32F" style="font-size:12; font-family:Arial black;">inter2</font></td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ우동국</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ오므라이스&불닭소스</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ오이피클</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ포기김치</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">767</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="105" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						
+						<!--- loop //--->
+					</td>
+					<td width="5"></td>
+				</tr>
+				
+				<tr>
+					<td width="10"></td>
+					<td width="52" align="center" valign="middle" class="14 b 72634D" style="border-right:1px solid #E5E0D9; border-bottom:1px solid #E5E0D9;">
+					화
+					</td>
+					<td>
+						<!-- // loof -->
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #E5E0D9;">
+						<tr>
+							<td width="55" align="center" valign="middle" bgcolor="#F6F8E6" style="border-right:1px solid #E5E0D9;"><font class="BBC32F" style="font-size:12; font-family:Arial black;">korean</font></td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ돼지고기고추장찌개</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ가자미엿장조림</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ솎음배추나물</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ포기김치</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ쌀밥</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">717</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ감자탕</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ두부조림</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ느타리마늘종무침</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ청포묵김가루무침</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ깍두기</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ보리밥</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">743</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ콩나물국</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ뚝배기 갈치조림</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ계란찜</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ숙주나물무침</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ포기김치</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ현미밥</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">732</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="105" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #E5E0D9;">
+						<tr>
+							<td width="55" align="center" valign="middle" bgcolor="#F6F8E6" style="border-right:1px solid #E5E0D9;"><font class="BBC32F" style="font-size:12; font-family:Arial black;">american</font></td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ즉석라면</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ단무지</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ쌀밥</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ포기김치</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">717</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="105" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #E5E0D9;">
+						<tr>
+							<td width="55" align="center" valign="middle" bgcolor="#F6F8E6" style="border-right:1px solid #E5E0D9;"><font class="BBC32F" style="font-size:12; font-family:Arial black;">inter</font></td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ양송이스프</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ불갈비스테이크</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ햄채소볶음밥</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ오이피클</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ깍두기</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">720</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="105" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #E5E0D9;">
+						<tr>
+							<td width="55" align="center" valign="middle" bgcolor="#F6F8E6" style="border-right:1px solid #E5E0D9;"><font class="BBC32F" style="font-size:12; font-family:Arial black;">noodle</font></td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ만두라면</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ메추리알어묵떡볶이</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ김말이튀김</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ단무지</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ포기김치</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ쌀밥</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">782</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ짬뽕</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ칠리소스탕수육</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ군만두</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ양파&춘장</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ단무지</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">728</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="105" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #E5E0D9;">
+						<tr>
+							<td width="55" align="center" valign="middle" bgcolor="#F6F8E6" style="border-right:1px solid #E5E0D9;"><font class="BBC32F" style="font-size:12; font-family:Arial black;">inter2</font></td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ미역장국</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ날치알밥</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ고구마맛탕</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ실곤약샐러드</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ깍두기</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">724</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="105" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						
+						<!--- loop //--->
+					</td>
+					<td width="5"></td>
+				</tr>
+				
+				<tr>
+					<td width="10"></td>
+					<td width="52" align="center" valign="middle" class="14 b 72634D" style="border-right:1px solid #E5E0D9; border-bottom:1px solid #E5E0D9;">
+					수
+					</td>
+					<td>
+						<!-- // loof -->
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #E5E0D9;">
+						<tr>
+							<td width="55" align="center" valign="middle" bgcolor="#F6F8E6" style="border-right:1px solid #E5E0D9;"><font class="BBC32F" style="font-size:12; font-family:Arial black;">korean</font></td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ북어국</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ떡갈비조림</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ무말랭이무침</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ포기김치</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ쌀밥</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">732</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ만두전골</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ감자채볶음</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ연근조림</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ돌나물&초장</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ포기김치</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ흑미밥</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">725</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ뚝배기 닭곰탕</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ김치전</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ미역줄기볶음</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ고추지절임</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ석박지</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ쌀밥</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">718</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="105" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #E5E0D9;">
+						<tr>
+							<td width="55" align="center" valign="middle" bgcolor="#F6F8E6" style="border-right:1px solid #E5E0D9;"><font class="BBC32F" style="font-size:12; font-family:Arial black;">american</font></td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ즉석라면</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ쌀밥</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ단무지</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ포기김치</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">717</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="105" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #E5E0D9;">
+						<tr>
+							<td width="55" align="center" valign="middle" bgcolor="#F6F8E6" style="border-right:1px solid #E5E0D9;"><font class="BBC32F" style="font-size:12; font-family:Arial black;">inter</font></td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ유부장국</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ카레라이스</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ새우커틀렛&타르타르소스</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ단무지</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ포기김치</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">791</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="105" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #E5E0D9;">
+						<tr>
+							<td width="55" align="center" valign="middle" bgcolor="#F6F8E6" style="border-right:1px solid #E5E0D9;"><font class="BBC32F" style="font-size:12; font-family:Arial black;">noodle</font></td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ단호박스프</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ날치알크림소스스파게티</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ마늘바게트</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ고구마샐러드</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ오이피클</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">737</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ물냉면</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ고기만두찜</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ빈대떡</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ참치김치주먹밥</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ냉면김치</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">703</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="105" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #E5E0D9;">
+						<tr>
+							<td width="55" align="center" valign="middle" bgcolor="#F6F8E6" style="border-right:1px solid #E5E0D9;"><font class="BBC32F" style="font-size:12; font-family:Arial black;">inter2</font></td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ뚝배기꽃게된장찌개</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ고등어구이&꽁치구이</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ참나물겉절이</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ포기김치</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ흑미밥</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">703</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="105" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						
+						<!--- loop //--->
+					</td>
+					<td width="5"></td>
+				</tr>
+				
+				<tr>
+					<td width="10"></td>
+					<td width="52" align="center" valign="middle" class="14 b 72634D" style="border-right:1px solid #E5E0D9; border-bottom:1px solid #E5E0D9;">
+					목
+					</td>
+					<td>
+						<!-- // loof -->
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #E5E0D9;">
+						<tr>
+							<td width="55" align="center" valign="middle" bgcolor="#F6F8E6" style="border-right:1px solid #E5E0D9;"><font class="BBC32F" style="font-size:12; font-family:Arial black;">korean</font></td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ김치국</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ스팸채소볶음</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ도토리묵무침</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ쌀밥</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ포기김치</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">701</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ시금치된장국</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ돼지고기불고기</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ모둠쌈(상추&깻잎)</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ파래무생채</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ포기김치</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ쌀밥</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">740</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ뚝배기 육개장</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ메추리알장조림</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ연두부찜</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ솎음배추나물</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ깍두기</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ기장밥</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">748</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="105" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #E5E0D9;">
+						<tr>
+							<td width="55" align="center" valign="middle" bgcolor="#F6F8E6" style="border-right:1px solid #E5E0D9;"><font class="BBC32F" style="font-size:12; font-family:Arial black;">american</font></td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ즉석라면</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ쌀밥</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ단무지</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ포기김치</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">717</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="105" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #E5E0D9;">
+						<tr>
+							<td width="55" align="center" valign="middle" bgcolor="#F6F8E6" style="border-right:1px solid #E5E0D9;"><font class="BBC32F" style="font-size:12; font-family:Arial black;">inter</font></td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ브로콜리스프</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ돈파게티(돈가스&토마토스파게티)</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ무비트피클</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ쌀밥</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">743</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="105" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #E5E0D9;">
+						<tr>
+							<td width="55" align="center" valign="middle" bgcolor="#F6F8E6" style="border-right:1px solid #E5E0D9;"><font class="BBC32F" style="font-size:12; font-family:Arial black;">noodle</font></td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ냉메밀소바</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ만두탕수</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ대나무죽통밥&우엉주먹밥</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ게맛살냉채</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ깍두기</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">734</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ부대찌개라면</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ왕꼬치튀김</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ단무지</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ포기김치</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ쌀밥</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">731</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="105" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #E5E0D9;">
+						<tr>
+							<td width="55" align="center" valign="middle" bgcolor="#F6F8E6" style="border-right:1px solid #E5E0D9;"><font class="BBC32F" style="font-size:12; font-family:Arial black;">inter2</font></td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ사각어묵국</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ라볶이&삶은계란</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ삼각김밥</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ만두튀김</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ단무지</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ포기김치</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">763</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="105" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						
+						<!--- loop //--->
+					</td>
+					<td width="5"></td>
+				</tr>
+				
+				<tr>
+					<td width="10"></td>
+					<td width="52" align="center" valign="middle" class="14 b 72634D" style="border-right:1px solid #E5E0D9; border-bottom:1px solid #E5E0D9;">
+					금
+					</td>
+					<td>
+						<!-- // loof -->
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #E5E0D9;">
+						<tr>
+							<td width="55" align="center" valign="middle" bgcolor="#F6F8E6" style="border-right:1px solid #E5E0D9;"><font class="BBC32F" style="font-size:12; font-family:Arial black;">korean</font></td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ어묵매운국</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ완자조림</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ진미채볶음</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ쌀밥</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ포기김치</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">710</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ순두부찌개</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ계란말이</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ어묵볶음</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ오이쌈장무침</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ포기김치</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ차조밥</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">730</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ미니우동</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ김치볶음밥&계란후라이</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ핫바</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ단무지</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ깍두기</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">748</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="105" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #E5E0D9;">
+						<tr>
+							<td width="55" align="center" valign="middle" bgcolor="#F6F8E6" style="border-right:1px solid #E5E0D9;"><font class="BBC32F" style="font-size:12; font-family:Arial black;">american</font></td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ즉석라면</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ쌀밥</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ단무지</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ포기김치</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">717</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="105" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #E5E0D9;">
+						<tr>
+							<td width="55" align="center" valign="middle" bgcolor="#F6F8E6" style="border-right:1px solid #E5E0D9;"><font class="BBC32F" style="font-size:12; font-family:Arial black;">inter</font></td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ미소장국</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ해물철판볶음밥</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ왕꼬치구이</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ오이피클</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ포기김치</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">672</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="105" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #E5E0D9;">
+						<tr>
+							<td width="55" align="center" valign="middle" bgcolor="#F6F8E6" style="border-right:1px solid #E5E0D9;"><font class="BBC32F" style="font-size:12; font-family:Arial black;">noodle</font></td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ계란국</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ사천자장면</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ춘권</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ단무지</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ포기김치</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ쌀밥</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">754</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="105" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #E5E0D9;">
+						<tr>
+							<td width="55" align="center" valign="middle" bgcolor="#F6F8E6" style="border-right:1px solid #E5E0D9;"><font class="BBC32F" style="font-size:12; font-family:Arial black;">inter2</font></td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+											<tr>
+												<td height="16" class="11">ㆍ미역국</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ뚝배기 돌솥비빔밥&계란후라이</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ부추호박전</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ치커리겉절이</td>
+											</tr>
+									
+											<tr>
+												<td height="16" class="11">ㆍ포기김치</td>
+											</tr>
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">765</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="110" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px; border-right:1px solid #E5E0D9;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+							<td width="105" align="center" valign="top" style="padding-left:10px; padding-top:10px; padding-bottom:10px;">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td height="16" class="11"><span class="verdana b 11 fc8414">0</span> kcal</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						
+						<!--- loop //--->
+					</td>
+					<td width="5"></td>
+				</tr>
+				
+				<!-- loof // -->
+			</table>
+			</div>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td height="10"></td>
+				</tr>
+				<tr>
+					<td align="right"><a href="./todayMenu.jsp?mMode=21"><img src="/img/mywelstory/btn_today_menu.gif"></a></td>
+				</tr>
+			</table>
+
+
+			<!-- 게시판목록 //-->
+
+				
+<script language="javascript">
+	// 패밀리 사이트 표시
+	function vFamily(){
+	
+		document.all.loadinglayer.style.display = "";
+	}
+	
+	// 패밀리 사이트 숨김
+	function cFamily(){
+	
+		document.all.loadinglayer.style.display = "none";
+	}
+	
+	function bottomPopup(turl, width, height){
+		var url		= "http://www.welstory.com/common/" + turl + ".jsp";
+		var size	= "width=" + width + ",height=" + height;
+		window.open(url, "", size);
+	}
+	function goVoc(){
+		location.href	= "http://www.welstory.com/helpdesk/unitedvoc/vocWrite.jsp?mMode=21";
+	} 
+</script>		
+	<div id="basislayer" style="position:relative;" >		
+			<!--// Family Site -->
+			<div id="loadinglayer" style="display:none; position:absolute; left:0; top:-341; width:558px; height:263px; z-index:1">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td align="right" style="padding-right:14px;"><a href="javascript:cFamily();"><img src="/img/common/btn_familyclose.gif"></a></td>
+				</tr>
+				<tr>
+					<td><script>printFlashObject('/swf/welstory_f.swf','familysite',558,263,'');</script></td>
+				</tr>
+			</table>
+			</div>
+			<!-- Family Site //-->
+
+			<p style="margin-top:80px;">
+
+			<table id='kwk' width="100%" height="27" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td colspan="6" height="1" bgcolor="dddddd"></td>
+				</tr>
+				<tr>
+					<td colspan="6" height="20"></td>
+				</tr>
+				<tr>
+					<td width="1"><a href="http://www.samsungeverland.com" target="new"><img src="/img/common/bottom_logo_samsung.gif"></a></td>
+					<td width="5"></td>
+					<td width="1" bgcolor="dddddd"></td>
+					<td width="5"></td>
+					<td>
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td><img src="/img/common/bottom_menu_01.gif" align="absmiddle" onClick="bottomPopup('TermsOfService', '600', '500');" style="cursor:hand"><img src="/img/common/bottom_menu_dot_yline.gif" hspace="8" align="absmiddle"><img src="/img/common/bottom_menu_02.gif" align="absmiddle" onClick="bottomPopup('PrivacyPolicy', '600', '500');" style="cursor:hand"><img src="/img/common/bottom_menu_dot_yline.gif" hspace="8" align="absmiddle"><img src="/img/common/bottom_menu_03.gif" align="absmiddle" onClick="bottomPopup('emailCollect', '500', '250');" style="cursor:hand"><img src="/img/common/bottom_menu_dot_yline.gif" hspace="8" align="absmiddle"><a href="http://audit.everland.com" target="new"><img src="/img/common/bottom_menu_05.gif" align="absmiddle"></a><img src="/img/common/bottom_menu_dot_yline.gif" hspace="8" align="absmiddle"><img src="/img/common/bottom_menu_04.gif" align="absmiddle" onClick="goVoc();" style="cursor:hand"><img src="/img/common/bottom_menu_dot_yline.gif" hspace="8" align="absmiddle"><img src="/img/common/bottom_familysite.gif" align="absmiddle" onClick="vFamily();" style="cursor:hand"></td>
+							</tr>
+							<tr>
+								<td height="7"></td>
+							</tr>
+							<tr>
+								<td height="25" valign="top" align="left"><img src="/img/common/bottom_info_02.gif" width="475"></td>
+							</tr>
+
+							<tr>
+								<td><img src="/img/common/bottom_copyright.gif"></td>
+							</tr>
+						</table>
+					</td>
+					<!-- <td width="1"><a href="http://audit.everland.com" target="new"><img src="/img/common/bottom_cyberpolice.gif"></a></td> -->
+				</tr>
+			</table>
+
+			<p style="margin-top:30px;"></p>
+			</div>
+		</td>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+<iframe src="" name="iframe_excel" frameborder="0" width="0" height="0" scrolling=no></iframe>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	var sele = document.mysearchform
+	function saveExcel() {
+		document.iframe_excel.location.href	= "/mywelstory/restaurant/menuExcel.jsp?mem_id=newbcode&sDate=20130407&hall_no=E1B7";
+	}
+
+	function prevWEEK(_milli) {
+		document.location.href = "?hall_no=E1B7&sDate_millis="+_milli;
+	}
+	function nextWEEK(_milli) {
+		document.location.href = "?hall_no=E1B7&sDate_millis="+_milli;
+	}
+
+
+
+
+			for(i=0;i<sele.hall_no.length;i++){
+				if(sele.hall_no.options[i].value == 'E1B7'){
+					sele.hall_no.options[i].selected =  true;
+				}
+			}
+		
+//-->
+</SCRIPT>
+</body>
+</html>
