@@ -110,86 +110,61 @@ my $noodle_cnt = 1;
 my $inter2_cnt = 1;
 my $course_cnt = 1;
 my $kcal_cnt =1;
+my $total_cnt =0;
 
 for (; $course_cnt <= 25; $course_cnt++) {
     if ( $course_cnt <= 5  ) {
             foreach my $today_food ( @foods ) {
                 if ( $kcal_cnt == 1 ) {
                     if ( $today_food =~ /kcal$/ ) {
+                        push @kor_breakfast, $today_food;
                         $kcal_cnt++;
+            $total_cnt++;
                     }
                     else {
                         push @kor_breakfast, $today_food;
+            $total_cnt++;
                     }
                 }
                 elsif ( $kcal_cnt == 2 ) {
                     if ( $today_food =~ /kcal$/ ) {
+                        push @kor_lunch, $today_food;
+            $total_cnt++;
                         $kcal_cnt++;
                     }
                     else {
                         push @kor_lunch, $today_food;
+            $total_cnt++;
                     }
                 }
                 elsif ( $kcal_cnt == 3 ) {
                     if ( $today_food =~ /kcal$/ ) {
+                        push @kor_dinner, $today_food;
+            $total_cnt++;
                         $kcal_cnt++;
                     }
                     else {
                         push @kor_dinner, $today_food;
+            $total_cnt++;
                     }
                 }
                 elsif ( $kcal_cnt == 4 ) {
                     if ( $today_food =~ /kcal$/ ) {
+                        push @kor_temp, $today_food;
+            $total_cnt++;
                         $kcal_cnt++;
                     }
                     else {
+            $total_cnt++;
                         push @kor_temp, $today_food;
                     }
                 }
             }
         }
-=pod
-    elsif ( $course_cnt <= 10  ) {
-            foreach my $today_food ( @foods ) {
-                if ( $kcal_cnt == 5 ) {
-                    if ( $today_food =~ /kcal$/ ) {
-                        $kcal_cnt++;
-                    }
-                    else {
-                        push @ame_breakfast, $today_food;
-                    }
-                }
-                elsif ( $kcal_cnt == 6 ) {
-                    if ( $today_food =~ /kcal$/ ) {
-                        $kcal_cnt++;
-                    }
-                    else {
-                        push @ame_lunch, $today_food;
-                    }
-                }
-                elsif ( $kcal_cnt == 7 ) {
-                    if ( $today_food =~ /kcal$/ ) {
-                        $kcal_cnt++;
-                    }
-                    else {
-                        push @ame_dinner, $today_food;
-                    }
-                }
-                elsif ( $kcal_cnt == 8 ) {
-                    if ( $today_food =~ /kcal$/ ) {
-                        $kcal_cnt++;
-                    }
-                    else {
-                        push @ame_temp, $today_food;
-                    }
-                }
-            }
-        }
-=cut
 }
 
 print "@kor_breakfast\n";
 print "@kor_lunch\n";
 print "@kor_dinner\n";
 print "@kor_temp\n";
-print "@ame_breakfast\n";
+print "$total_cnt\n";
