@@ -102,6 +102,11 @@ my @inter2_breakfast;
 my @inter2_lunch;
 my @inter2_dinner;
 my @inter2_temp;
+my @inter3_breakfast;
+my @inter3_lunch;
+my @inter3_dinner;
+my @inter3_temp;
+
 
 my $korean_cnt = 1;
 my $american_cnt = 1;
@@ -111,8 +116,6 @@ my $inter2_cnt = 1;
 my $course_cnt = 1;
 my $kcal_cnt =1;
 my $total_cnt =0;
-
-
 
 for (; $course_cnt <= 5; $course_cnt++) {
     if ( $course_cnt <= 5  ) {
@@ -203,8 +206,7 @@ for (; $course_cnt <= 10; $course_cnt++) {
                          $total_cnt++;
                     }
                 }
-                elsif ( $kcal_cnt == 8 ) {
-                    if ( $today_food =~ /kcal$/ ) {
+                elsif ( $kcal_cnt == 8 ) { if ( $today_food =~ /kcal$/ ) {
                         push @ame_temp, $today_food;
                         $kcal_cnt++;
                         $total_cnt++;
@@ -320,7 +322,7 @@ for (; $course_cnt <= 20; $course_cnt++) {
                     else {
                         push @nood_temp, $today_food;
                          $total_cnt++;
-                    }
+                   }
                 }
             }
     }
@@ -379,6 +381,9 @@ for (; $course_cnt <= 25; $course_cnt++) {
     }
 } 
 
+splice (@foods, 0, $total_cnt);        
+$total_cnt = 0;
+
 print "@kor_breakfast\n";
 print "@kor_lunch\n";
 print "@kor_dinner\n";
@@ -399,4 +404,3 @@ print "@inter2_breakfast\n";
 print "@inter2_lunch\n";
 print "@inter2_dinner\n";
 print "@inter2_temp\n";
-print "@course\n";

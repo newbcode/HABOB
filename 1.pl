@@ -27,12 +27,11 @@ my $a = 1;
 my $b =05;
 my $c = $a + $b;
 
-print "$c\n";
+my @k = qw/1 2 3 4 5/;
 
-my @k = qw/a b c d e/;
+my $d = 0;
+my $f = 4;
 
-my $t = 10;
-my @d = shift @k;
+my $r = 5 % 4;
 
-print "@d\n";
-print "@k\n";
+print "$r\n";
