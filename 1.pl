@@ -26,12 +26,19 @@ use warnings;
 my $a = 1;
 my $b =05;
 my $c = $a + $b;
-
 my @k = qw/1 2 3 4 5/;
-
 my $d = 0;
 my $f = 4;
-
 my $r = 5 % 4;
+my @days = qw/2013-04-23 2013-04-24/;
+my $first_day = '2013-04-23';
+my @test;
 
-print "$r\n";
+my $c_date = `date "+%Y-%m-%d"`;
+chomp ($c_date);
+
+push @test, ("$a"."$b");
+print "@test\n";
+print "$test[1]\n";
+
+
