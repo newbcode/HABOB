@@ -104,17 +104,9 @@ foreach my $d_today_menu ( @today_menu ) {
     push @ddd_today_menu, $dd_today_menu;
 }
 
-my @ddd_today_menu;
-my @today_menu = qw/한식 양식 분식 /;
-
-foreach my $d_today_menu ( @today_menu ) {
-    my $dd_today_menu = decode("utf8", $d_today_menu);
-    push @ddd_today_menu, $dd_today_menu;
-}
-
 foreach my $day_parser ( @days ) {
     if ( $day_parser eq "$c_date" ) {
-        push @tweet, ("$c_date"."  $seq_days[0]\n");
+        push @tweet, ("$c_date"."  $seq_days[0]");
         today_food(0, 3, 'korean');
         today_food(4, 7, 'american');
         today_food(8, 11, 'inter');
@@ -122,7 +114,7 @@ foreach my $day_parser ( @days ) {
         today_food(16, 19, 'inter2');
     }
     elsif ( $day_parser eq "$c_date" ) {
-        push @tweet, ("$c_date"."  $seq_days[1]\n");
+        push @tweet, ("$c_date"."  $seq_days[1]");
         today_food(20, 23, 'korean');
         today_food(24, 27, 'american');
         today_food(28, 31, 'inter');
@@ -130,7 +122,7 @@ foreach my $day_parser ( @days ) {
         today_food(36, 39, 'inter2');
     }
     elsif ( $day_parser eq "$c_date" ) {
-        push @tweet, ("$c_date"."  $seq_days[2]\n");
+        push @tweet, ("$c_date"."  $seq_days[2]");
         today_food(40, 43, 'korean');
         today_food(44, 47, 'american');
         today_food(48, 51, 'inter');
@@ -138,7 +130,7 @@ foreach my $day_parser ( @days ) {
         today_food(56, 59, 'inter2');
     }
     elsif ( $day_parser eq "$c_date") {
-        push @tweet, ("$c_date"."  $seq_days[3]\n");
+        push @tweet, ("$c_date"."  $seq_days[3]");
         today_food(60, 63, 'korean');
         today_food(64, 67, 'american');
         today_food(68, 71, 'inter');
@@ -146,7 +138,7 @@ foreach my $day_parser ( @days ) {
         today_food(76, 79, 'inter2');
     }
     elsif ( $day_parser eq "$c_date" ) {
-        push @tweet, ("$c_date"."  $seq_days[4]\n");
+        push @tweet, ("$c_date"."  $seq_days[4]");
         today_food(80, 83, 'korean');
         today_food(84, 87, 'american');
         today_food(88, 91, 'inter');
@@ -158,25 +150,40 @@ foreach my $day_parser ( @days ) {
 
 sub today_food {
     my ($init_num, $last_num, $menu) = @_;
+    my $kcal = "kcal";
     for (; $init_num <= $last_num; $init_num++) {
         my $div = $init_num % 4;
         if ( $div == 0 ) {
-            #print "$menu: "."blackfast"."$new_foods[$init_num]\n";
-            push @tweet, ("$menu "."$ddd_today_menu[0]"."$new_foods[$init_num]\n");
+            if ( $new_foods[$init_num] =~ /^\d+/ ) {
+                $new_foods[$init_num] = "Nothing";
+                $kcal = "";
+            }
+            push @tweet, ("$menu "."$ddd_today_menu[0] "."$new_foods[$init_num]"."$kcal");
         }
         elsif ( $div == 1 ) {
-            #print "$menu: "."lunch"."$new_foods[$init_num]\n";
-            push @tweet, ("$menu "."lunch"."$new_foods[$init_num]\n");
+            if ( $new_foods[$init_num] =~ /^\d+/ ) {
+                $new_foods[$init_num] = "Nothing";
+                $kcal = "";
+            }
+            push @tweet, ("$menu "."$ddd_today_menu[1] "."$new_foods[$init_num]"."$kcal");
         }
         elsif ( $div == 2 ) {
-            #print "$menu: "."dinner"."$new_foods[$init_num]\n";
-            push @tweet, ("$menu "."dinner"."$new_foods[$init_num]\n");
+            if ( $new_foods[$init_num] =~ /^\d+/ ) {
+                $new_foods[$init_num] = "Nothing";
+                $kcal = "";
+            }
+            push @tweet, ("$menu "."$ddd_today_menu[2] "."$new_foods[$init_num]"."$kcal");
         }
         elsif ( $div == 3 ) {
-            #print "$menu: "."temp"."$new_foods[$init_num]\n";
-            push @tweet, ("$menu "."temp"."$new_foods[$init_num]\n");
+            if ( $new_foods[$init_num] =~ /^\d+/ ) {
+                $new_foods[$init_num] = "Nothing";
+                $kcal = "";
+            }
+            push @tweet, ("$menu "."$ddd_today_menu[3] "."$new_foods[$init_num]"."$kcal");
         }
+    $kcal = "kcal";
     }
 }
-print "@tweet\n";
-#print "$tweet[20]\n";
+foreach (@tweet) {
+    print "$_\n";
+}
