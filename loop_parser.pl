@@ -17,6 +17,19 @@ my $base_url = 'http://www.welstory.com/main.jsp';
 my $week3_url = 'http://www.welstory.com/mywelstory/restaurant/weekMenu.jsp?mMode=21&sDate=2013-04-22&hall_no=E1B7';
 my $html = 'welstory.html';
 
+my $consumer_key = '';
+my $consumer_secret = '';
+my $access_token = '';
+my $access_token_secret = '';
+
+my $nt = Net::Twitter::Lite->new(
+    consumer_key        => $consumer_key,
+    consumer_secret     => $consumer_secret,
+    access_token        => $access_token,
+    access_token_secret => $access_token_secret,
+    legacy_lists_api => 0,
+);
+
 =pod
 my $ua = LWP::UserAgent->new;
 my $response;
@@ -108,10 +121,20 @@ foreach my $day_parser ( @days ) {
     if ( $day_parser eq "$c_date" ) {
         push @tweet, ("$c_date"."  $seq_days[0]");
         today_food(0, 3, 'korean');
+        my $result = eval { $nt->update("@tweet") };
+        warn "$@\n" if $@;
         today_food(4, 7, 'american');
+        $result = eval { $nt->update("@tweet") };
+        warn "$@\n" if $@;
         today_food(8, 11, 'inter');
+        $result = eval { $nt->update("@tweet") };
+        warn "$@\n" if $@;
         today_food(12, 15, 'noodle');
+        $result = eval { $nt->update("@tweet") };
+        warn "$@\n" if $@;
         today_food(16, 19, 'inter2');
+        $result = eval { $nt->update("@tweet") };
+        warn "$@\n" if $@;
     }
     elsif ( $day_parser eq "$c_date" ) {
         push @tweet, ("$c_date"."  $seq_days[1]");
@@ -183,7 +206,4 @@ sub today_food {
         }
     $kcal = "kcal";
     }
-}
-foreach (@tweet) {
-    print "$_\n";
 }
