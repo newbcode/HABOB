@@ -23,11 +23,7 @@ use warnings;
 
 my @days = qw/2013-04-23 2013-04-24/;
 
-test(1, 2, @days);
 
-sub test {
-    my ( $a, $b, @c ) = @_;
-    print "$a\n";
-    print "$b\n";
-    print "@c\n";
-}
+my $t_date = `date "+%T"`;
+my @tt_date = split /:/, $t_date;
+print "@tt_date\n";

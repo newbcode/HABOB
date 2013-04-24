@@ -49,9 +49,11 @@ else {
 =cut
 my $day_p = HTML::TokeParser::Simple->new( $html );
 my (@days, @seq_days, @course, @foods);
-my (@tweet, @black_tweet, @lunch_tweet, @dinner_tweet, @temp_tweet, @test_tweet);
+my (@tweet, @black_tweet, @lunch_tweet, @lunch2_tweet, @dinner_tweet, @temp_tweet, @test_tweet);
 my ($first_day, $last_day);
 my $c_date = `date "+%Y-%m-%d"`;
+my $n_date = `date "+%T"`;
+my @nn_date = split /:/, $n_date;
 chomp $c_date;
 
 while ( my $td = $day_p->get_tag('td') ) {
@@ -118,6 +120,9 @@ foreach my $d_today_menu ( @today_menu ) {
 foreach my $day_parser ( @days ) {
     if ( $day_parser eq "$c_date" ) {
         push @tweet, ("$c_date"."  $seq_days[0]");
+        push @black_tweet, ("$c_date"."  $seq_days[0]"."\n");
+        push @lunch_tweet, ("$c_date"."  $seq_days[0]"."\n");
+        push @dinner_tweet, ("$c_date"."  $seq_days[0]"."\n");
         today_food(0, 3, 'korean');
         today_food(4, 7, 'american');
         today_food(8, 11, 'inter');
@@ -159,20 +164,24 @@ foreach my $day_parser ( @days ) {
 
 }
 
+my $result = eval { $nt->update("@black_tweet") };
+warn "$@\n" if $@;
+$result = eval { $nt->update("@lunch_tweet") };
+warn "$@\n" if $@;
+$result = eval { $nt->update("@lunch2_tweet") };
+warn "$@\n" if $@;
+$result = eval { $nt->update("@dinner_tweet") };
+warn "$@\n" if $@;
+
 sub today_food {
     my ($init_num, $last_num, $menu) = @_;
     my $kcal = "kcal";
     my $t_cnt = 0;
+    my $p_init_num = $init_num + 1;
+
     for (; $init_num <= $last_num; $init_num++) {
         my $div = $init_num % 4;
         if ( $div == 0 ) {
-=pod
-            if ( $new_foods[$init_num] =~ /^\d+/ ) {
-                #$new_foods[$init_num] = "Nohing";
-                $new_foods[$init_num] = "X";
-                $kcal = "";
-            }
-=cut
             push @tweet, ("$menu "."$ddd_today_menu[0] "."$new_foods[$init_num]");
             next if ( $new_foods[$init_num] =~ /^\d+/ );
             push @black_tweet, ("$menu "."$ddd_today_menu[0] "."$new_foods[$init_num]"."$kcal\n");
@@ -180,7 +189,12 @@ sub today_food {
         elsif ( $div == 1 ) {
             push @tweet, ("$menu "."$ddd_today_menu[1] "."$new_foods[$init_num]"."$kcal");
             next if ( $new_foods[$init_num] =~ /^\d+/ );
-            push @lunch_tweet, ("$menu "."$ddd_today_menu[1] "."$new_foods[$init_num]"."$kcal\n");
+            if ( $menu =~ /korean|^inter$/ ) {
+                push @lunch2_tweet, ("$menu "."$ddd_today_menu[1] "."$new_foods[$init_num]"."$kcal\n");
+            }
+            else {
+                push @lunch_tweet, ("$menu "."$ddd_today_menu[1] "."$new_foods[$init_num]"."$kcal\n");
+            }
         }
         elsif ( $div == 2 ) {
             push @tweet, ("$menu "."$ddd_today_menu[2] "."$new_foods[$init_num]"."$kcal");
@@ -194,13 +208,4 @@ sub today_food {
         }
     $kcal = "kcal";
     }
-}
-#my $result = eval { $nt->update("@black_tweet") };
-#$result = eval { $nt->update("@lunch_tweet") };
-my $result = eval { $nt->update("@dinner_tweet") };
-warn "$@\n" if $@;
-
-=pod
-foreach ( @lunch_tweet ) {
-    print "$_\n";
 }
