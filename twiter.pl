@@ -4,10 +4,10 @@
 #use warnings;
 use Net::Twitter::Lite
 
-$consumer_key = 'p7dD6cKiKzxQj2sRvUExEA';
-$consumer_secret = 'HubMLKVSR67obw1z3AYE224deQeKhevA7W0Vmm4lpbI';
-$access_token = '1349393743-ZUwuWUWUN2sGVtTfE7y9smUny3PREjuVfWsNCrU';
-$access_token_secret = 'CdA1SV0sRSzNo2hDjdqKGSWECdzFjtq35DctceCgq8';
+$consumer_key = '';
+$consumer_secret = '';
+$access_token = '';
+$access_token_secret = '';
 
 my $nt = Net::Twitter::Lite->new(
     consumer_key        => $consumer_key,
