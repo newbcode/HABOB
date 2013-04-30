@@ -1,4 +1,4 @@
-#!/usr/bin/env perl
+#!/home/newbcode/perl5/perlbrew/perls/perl-5.16.2/bin/perl
 
 use strict;
 use warnings;
@@ -12,16 +12,10 @@ use Encode qw(encode decode);
 use Net::Twitter::Lite
 binmode(STDOUT, ":utf8");
 
-my $login_url = 'http://www.welstory.com/loginAction.do?%2Fmywelstory%2FmywelIndex.jsp&pwd_yn=Y&memId=&pwd=';
-my $base_url = 'http://www.welstory.com/main.jsp';
-my $week3_url = 'http://www.welstory.com/mywelstory/restaurant/weekMenu.jsp?mMode=21&sDate=2013-04-22&hall_no=E1B7';
-my $html = 'welstory.html';
-
 my $consumer_key = '';
 my $consumer_secret = '';
 my $access_token = '';
 my $access_token_secret = '';
-
 
 my $nt = Net::Twitter::Lite->new(
     consumer_key        => $consumer_key,
@@ -31,30 +25,43 @@ my $nt = Net::Twitter::Lite->new(
     legacy_lists_api => 0,
 );
 
-=pod
-my $ua = LWP::UserAgent->new;
-my $response;
-my $cookies = new HTTP::Cookies;
-$ua->cookie_jar({});
-$response = $ua->get($base_url);
-$response = $ua->get($login_url);
-#$response = $ua->get($week_url);
-$response = $ua->get($week3_url);
-if ( $response->is_success ) {
-    $response = $ua->get($week3_url, ":content_file" => "$html");
+my $week3_url;
+my $html = 'welstory.html';
+my $date_check = `date "+%a"`;
+chomp $date_check;
+my $c_date = `date "+%Y-%m-%d"`;
+chomp $c_date;
+
+my $login_url = 'http://www.welstory.com/loginAction.do?%2Fmywelstory%2FmywelIndex.jsp&pwd_yn=Y&memId=&pwd=';
+my $base_url = 'http://www.welstory.com/main.jsp';
+#my $week3_url = "http://www.welstory.com/mywelstory/restaurant/weekMenu.jsp?mMode=21&sDate=$c_date&hall_no=E1B7";
+#my $html = "$c_date.welstory.html";
+
+if ( $date_check eq 'Mon' ) {
+    $week3_url = "http://www.welstory.com/mywelstory/restaurant/weekMenu.jsp?mMode=21&sDate=$c_date&hall_no=E1B7";
+    $html = "welstory.html";
+
+    my $ua = LWP::UserAgent->new;
+    my $response;
+    my $cookies = new HTTP::Cookies;
+    $ua->cookie_jar({});
+    $response = $ua->get($base_url);
+    $response = $ua->get($login_url);
+    $response = $ua->get($week3_url);
+    if ( $response->is_success ) {
+        $response = $ua->get($week3_url, ":content_file" => "$html");
+    }
+    else {
+        die $response->status_line;
+    }
 }
-else {
-    die $response->status_line;
-}
-=cut
+
 my $day_p = HTML::TokeParser::Simple->new( $html );
 my (@days, @seq_days, @course, @foods);
 my (@tweet, @black_tweet, @lunch_tweet, @lunch2_tweet, @dinner_tweet, @temp_tweet, @test_tweet);
 my ($first_day, $last_day);
-my $c_date = `date "+%Y-%m-%d"`;
 my $n_date = `date "+%T"`;
 my @nn_date = split /:/, $n_date;
-chomp $c_date;
 
 while ( my $td = $day_p->get_tag('td') ) {
     if ( my $td_attr = $td->get_attr('width') ) {
@@ -117,60 +124,80 @@ foreach my $d_today_menu ( @today_menu ) {
     push @ddd_today_menu, $dd_today_menu;
 }
 
-foreach my $day_parser ( @days ) {
-    if ( $day_parser eq "$c_date" ) {
-        push @tweet, ("$c_date"."  $seq_days[0]");
-        push @black_tweet, ("$c_date"."  $seq_days[0]"."\n");
-        push @lunch_tweet, ("$c_date"."  $seq_days[0]"."\n");
-        push @dinner_tweet, ("$c_date"."  $seq_days[0]"."\n");
-        today_food(0, 3, 'korean');
-        today_food(4, 7, 'american');
-        today_food(8, 11, 'inter');
-        today_food(12, 15, 'noodle');
-        today_food(16, 19, 'inter2');
-    }
-    elsif ( $day_parser eq "$c_date" ) {
-        push @tweet, ("$c_date"."  $seq_days[1]");
-        today_food(20, 23, 'korean');
-        today_food(24, 27, 'american');
-        today_food(28, 31, 'inter');
-        today_food(32, 35, 'noodle');
-        today_food(36, 39, 'inter2');
-    }
-    elsif ( $day_parser eq "$c_date" ) {
-        push @tweet, ("$c_date"."  $seq_days[2]");
-        today_food(40, 43, 'korean');
-        today_food(44, 47, 'american');
-        today_food(48, 51, 'inter');
-        today_food(52, 55, 'noodle');
-        today_food(56, 59, 'inter2');
-    }
-    elsif ( $day_parser eq "$c_date") {
-        push @tweet, ("$c_date"."  $seq_days[3]");
-        today_food(60, 63, 'korean');
-        today_food(64, 67, 'american');
-        today_food(68, 71, 'inter');
-        today_food(72, 75, 'noodle');
-        today_food(76, 79, 'inter2');
-    }
-    elsif ( $day_parser eq "$c_date" ) {
-        push @tweet, ("$c_date"."  $seq_days[4]");
-        today_food(80, 83, 'korean');
-        today_food(84, 87, 'american');
-        today_food(88, 91, 'inter');
-        today_food(92, 95, 'noodle');
-        today_food(96, 99, 'inter2');
-    }
+my (@hello_msg, @d_hello_msg);
+$hello_msg[0] = '좋은 아침입니다. 아침밥 맛있게 드세요';
+$hello_msg[1] = '맛점 하세요.';
+$hello_msg[2] = '수고 하셨습니다. 저녁밥 맛있게 드세요';
 
+foreach my $d_hello_msg ( @hello_msg ) {
+    my $dd_hello_msg = decode("utf8", $d_hello_msg);
+    push @d_hello_msg, $dd_hello_msg;
 }
 
-my $result = eval { $nt->update("@black_tweet") };
-warn "$@\n" if $@;
-$result = eval { $nt->update("@lunch_tweet") };
+if ( $days[0] eq "$c_date" ) {
+    push @tweet, ("$c_date"."  $seq_days[0]");
+    push @black_tweet, ("$c_date"."  $seq_days[0]  "." $d_hello_msg[0]"."\n");
+    push @lunch_tweet, ("$c_date"."  $seq_days[0]  "." $d_hello_msg[1]"."\n");
+    push @lunch2_tweet, ("$c_date"."  $seq_days[0]  "." $d_hello_msg[1]"."\n");
+    push @dinner_tweet, ("$c_date"."  $seq_days[0]  "." $d_hello_msg[2]"."\n");
+    today_food(0, 3, 'korean');
+    today_food(4, 7, 'american');
+    today_food(8, 11, 'inter');
+    today_food(12, 15, 'noodle');
+    today_food(16, 19, 'inter2');
+}
+elsif ( $days[1] eq "$c_date" ) {
+    push @tweet, ("$c_date"."  $seq_days[1]");
+    push @black_tweet, ("$c_date"."  $seq_days[1]"." $d_hello_msg[0]"."\n");
+    push @lunch_tweet, ("$c_date"."  $seq_days[1]"." $d_hello_msg[1]"."\n");
+    push @lunch2_tweet, ("$c_date"."  $seq_days[1]"." $d_hello_msg[1]"."\n");
+    push @dinner_tweet, ("$c_date"."  $seq_days[1]"." $d_hello_msg[2]"."\n");
+    today_food(20, 23, 'korean');
+    today_food(24, 27, 'american');
+    today_food(28, 31, 'inter');
+    today_food(32, 35, 'noodle');
+    today_food(36, 39, 'inter2');
+}
+elsif ( $days[2] eq "$c_date" ) {
+    push @tweet, ("$c_date"."  $seq_days[2]");
+    push @black_tweet, ("$c_date"."  $seq_days[2]  "." $d_hello_msg[0]"."\n");
+    push @lunch_tweet, ("$c_date"."  $seq_days[2]  "." $d_hello_msg[1]"."\n");
+    push @lunch2_tweet, ("$c_date"."  $seq_days[2]  "." $d_hello_msg[1]"."\n");
+    push @dinner_tweet, ("$c_date"."  $seq_days[2]  "." $d_hello_msg[2]"."\n");
+    today_food(40, 43, 'korean');
+    today_food(44, 47, 'american');
+    today_food(48, 51, 'inter');
+    today_food(52, 55, 'noodle');
+    today_food(56, 59, 'inter2');
+}
+elsif ( $days[3] eq "$c_date") {
+    push @tweet, ("$c_date"."  $seq_days[3]");
+    push @black_tweet, ("$c_date"."  $seq_days[3]  "." $d_hello_msg[0]"."\n");
+    push @lunch_tweet, ("$c_date"."  $seq_days[3]  "." $d_hello_msg[1]"."\n");
+    push @lunch2_tweet, ("$c_date"."  $seq_days[3]  "." $d_hello_msg[1]"."\n");
+    push @dinner_tweet, ("$c_date"."  $seq_days[3]  "." $d_hello_msg[2]"."\n");
+    today_food(60, 63, 'korean');
+    today_food(64, 67, 'american');
+    today_food(68, 71, 'inter');
+    today_food(72, 75, 'noodle');
+    today_food(76, 79, 'inter2');
+}
+elsif ( $days[4] eq "$c_date" ) {
+    push @tweet, ("$c_date"."  $seq_days[4]");
+    push @black_tweet, ("$c_date"."  $seq_days[4]  "." $d_hello_msg[0]"."\n");
+    push @lunch_tweet, ("$c_date"."  $seq_days[4]  "." $d_hello_msg[1]"."\n");
+    push @lunch2_tweet, ("$c_date"."  $seq_days[4]  "." $d_hello_msg[1]"."\n");
+    push @dinner_tweet, ("$c_date"."  $seq_days[4]  "." $d_hello_msg[2]"."\n");
+    today_food(80, 83, 'korean');
+    today_food(84, 87, 'american');
+    today_food(88, 91, 'inter');
+    today_food(92, 95, 'noodle');
+    today_food(96, 99, 'inter2');
+}
+
+my $result = eval { $nt->update("@lunch_tweet") };
 warn "$@\n" if $@;
 $result = eval { $nt->update("@lunch2_tweet") };
-warn "$@\n" if $@;
-$result = eval { $nt->update("@dinner_tweet") };
 warn "$@\n" if $@;
 
 sub today_food {
