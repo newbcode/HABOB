@@ -3,13 +3,11 @@
 use strict;
 use warnings;
 
-my @arry_t = qw/a b c d e/;
-print "$arry_t[3]\n";
-push @arry_t, $arry_t[3] = 1;
-print "$arry_t[3]\n";
-print "$arry_t[4]\n";
-print "@arry_t";
-
+my $a = 0;
+foreach ( qw/1 2 3 4 5/ ) {
+    $a += 20;
+    print "$a\n";
+}
 
 =pod
 my $date_check = `date "+%a"`;
