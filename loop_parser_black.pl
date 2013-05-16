@@ -117,17 +117,26 @@ foreach my $new_date ( qw/a 1 2 3 4/ ) {
 my $scalra_foods = join "", @foods;
 my @new_foods = split (/kcal/, $scalra_foods);
 my @ddd_today_menu;
+my @ddd_utf_days;
+my $sw_tweet = 'on';
 my @today_menu = qw/아침 점심 저녁 야식/;
+my @utf_days = qw/월 화 수 목 금/;
 
 foreach my $d_today_menu ( @today_menu ) {
     my $dd_today_menu = decode("utf8", $d_today_menu);
     push @ddd_today_menu, $dd_today_menu;
 }
 
+foreach my $d_utf_day ( @utf_days ) {
+    my $dd_utf_day = decode("utf8", $d_utf_day);
+    push @ddd_utf_days, $dd_utf_day;
+}
+
 my (@hello_msg, @d_hello_msg);
 $hello_msg[0] = '좋은 아침입니다. 아침밥 맛있게 드세요';
 $hello_msg[1] = '맛점 하세요.';
 $hello_msg[2] = '수고 하셨습니다. 저녁밥 맛있게 드세요';
+$hello_msg[3] = '즐거운 휴일 보내세요';
 
 foreach my $d_hello_msg ( @hello_msg ) {
     my $dd_hello_msg = decode("utf8", $d_hello_msg);
@@ -135,68 +144,155 @@ foreach my $d_hello_msg ( @hello_msg ) {
 }
 
 if ( $days[0] eq "$c_date" ) {
-    push @tweet, ("$c_date"."  $seq_days[0]");
-    push @black_tweet, ("$c_date"."  $seq_days[0]  "." $d_hello_msg[0]"."\n");
-    push @lunch_tweet, ("$c_date"."  $seq_days[0]  "." $d_hello_msg[1]"."\n");
-    push @lunch2_tweet, ("$c_date"."  $seq_days[0]  "." $d_hello_msg[1]"."\n");
-    push @dinner_tweet, ("$c_date"."  $seq_days[0]  "." $d_hello_msg[2]"."\n");
-    today_food(0, 3, 'korean');
-    today_food(4, 7, 'american');
-    today_food(8, 11, 'inter');
-    today_food(12, 15, 'noodle');
-    today_food(16, 19, 'inter2');
+    if ( $seq_days[0] eq $ddd_utf_days[0] ) {
+        push @tweet, ("$c_date"."  $seq_days[0]");
+        push @black_tweet, ("$c_date"."  $seq_days[0]  "." $d_hello_msg[0]"."\n");
+        push @lunch_tweet, ("$c_date"."  $seq_days[0]  "." $d_hello_msg[1]"."\n");
+        push @lunch2_tweet, ("$c_date"."  $seq_days[0]  "." $d_hello_msg[1]"."\n");
+        push @dinner_tweet, ("$c_date"."  $seq_days[0]  "." $d_hello_msg[2]"."\n");
+        today_food(0, 3, 'korean');
+        today_food(4, 7, 'american');
+        today_food(8, 11, 'inter');
+        today_food(12, 15, 'noodle');
+        today_food(16, 19, 'inter2');
+    }
+    else {
+        $sw_tweet = 'off';
+    }
 }
 elsif ( $days[1] eq "$c_date" ) {
-    push @tweet, ("$c_date"."  $seq_days[1]");
-    push @black_tweet, ("$c_date"."  $seq_days[1]"." $d_hello_msg[0]"."\n");
-    push @lunch_tweet, ("$c_date"."  $seq_days[1]"." $d_hello_msg[1]"."\n");
-    push @lunch2_tweet, ("$c_date"."  $seq_days[1]"." $d_hello_msg[1]"."\n");
-    push @dinner_tweet, ("$c_date"."  $seq_days[1]"." $d_hello_msg[2]"."\n");
-    today_food(20, 23, 'korean');
-    today_food(24, 27, 'american');
-    today_food(28, 31, 'inter');
-    today_food(32, 35, 'noodle');
-    today_food(36, 39, 'inter2');
+    if ( $seq_days[1] eq $ddd_utf_days[1] ) {
+        push @tweet, ("$c_date"."  $seq_days[1]");
+        push @black_tweet, ("$c_date"."  $seq_days[1]"." $d_hello_msg[0]"."\n");
+        push @lunch_tweet, ("$c_date"."  $seq_days[1]"." $d_hello_msg[1]"."\n");
+        push @lunch2_tweet, ("$c_date"."  $seq_days[1]"." $d_hello_msg[1]"."\n");
+        push @dinner_tweet, ("$c_date"."  $seq_days[1]"." $d_hello_msg[2]"."\n");
+        today_food(20, 23, 'korean');
+        today_food(24, 27, 'american');
+        today_food(28, 31, 'inter');
+        today_food(32, 35, 'noodle');
+        today_food(36, 39, 'inter2');
+    }
+    else {
+        if ( $seq_days[0] ne $ddd_utf_days[0] ) { 
+            push @tweet, ("$c_date"."  $ddd_utf_days[1]");
+            push @black_tweet, ("$c_date"."  $ddd_utf_days[1]  "." $d_hello_msg[0]"."\n");
+            push @lunch_tweet, ("$c_date"."  $ddd_utf_days[1]  "." $d_hello_msg[1]"."\n");
+            push @lunch2_tweet, ("$c_date"."  $ddd_utf_days[1]  "." $d_hello_msg[1]"."\n");
+            push @dinner_tweet, ("$c_date"."  $ddd_utf_days[1]  "." $d_hello_msg[2]"."\n");
+            today_food(20-20, 23-20, 'korean');
+            today_food(24-20, 27-20, 'american');
+            today_food(28-20, 31-20, 'inter');
+            today_food(32-20, 35-20, 'noodle');
+            today_food(36-20, 39-20, 'inter2');
+        }
+        else {
+            $sw_tweet = 'off';
+        }
+    }
 }
 elsif ( $days[2] eq "$c_date" ) {
-    push @tweet, ("$c_date"."  $seq_days[2]");
-    push @black_tweet, ("$c_date"."  $seq_days[2]  "." $d_hello_msg[0]"."\n");
-    push @lunch_tweet, ("$c_date"."  $seq_days[2]  "." $d_hello_msg[1]"."\n");
-    push @lunch2_tweet, ("$c_date"."  $seq_days[2]  "." $d_hello_msg[1]"."\n");
-    push @dinner_tweet, ("$c_date"."  $seq_days[2]  "." $d_hello_msg[2]"."\n");
-    today_food(40, 43, 'korean');
-    today_food(44, 47, 'american');
-    today_food(48, 51, 'inter');
-    today_food(52, 55, 'noodle');
-    today_food(56, 59, 'inter2');
+    if ( $seq_days[2] eq $ddd_utf_days[2] ) {
+        push @tweet, ("$c_date"."  $seq_days[2]");
+        push @black_tweet, ("$c_date"."  $seq_days[2]  "." $d_hello_msg[0]"."\n");
+        push @lunch_tweet, ("$c_date"."  $seq_days[2]  "." $d_hello_msg[1]"."\n");
+        push @lunch2_tweet, ("$c_date"."  $seq_days[2]  "." $d_hello_msg[1]"."\n");
+        push @dinner_tweet, ("$c_date"."  $seq_days[2]  "." $d_hello_msg[2]"."\n");
+        today_food(40, 43, 'korean');
+        today_food(44, 47, 'american');
+        today_food(48, 51, 'inter');
+        today_food(52, 55, 'noodle');
+        today_food(56, 59, 'inter2');
+    }
+    else {
+        if ( $seq_days[1] ne $ddd_utf_days[1] ) { 
+            push @tweet, ("$c_date"."  $ddd_utf_days[2]");
+            push @black_tweet, ("$c_date"."  $ddd_utf_days[2]  "." $d_hello_msg[0]"."\n");
+            push @lunch_tweet, ("$c_date"."  $ddd_utf_days[2]  "." $d_hello_msg[1]"."\n");
+            push @lunch2_tweet, ("$c_date"."  $ddd_utf_days[2]  "." $d_hello_msg[1]"."\n");
+            push @dinner_tweet, ("$c_date"."  $ddd_utf_days[2]  "." $d_hello_msg[2]"."\n");
+            today_food(40-20, 43-20, 'korean');
+            today_food(44-20, 47-20, 'american');
+            today_food(48-20, 51-20, 'inter');
+            today_food(52-20, 55-20, 'noodle');
+            today_food(56-20, 59-20, 'inter2');
+        }
+        else {
+            $sw_tweet = 'off';
+        }
+    }
 }
 elsif ( $days[3] eq "$c_date") {
-    push @tweet, ("$c_date"."  $seq_days[3]");
-    push @black_tweet, ("$c_date"."  $seq_days[3]  "." $d_hello_msg[0]"."\n");
-    push @lunch_tweet, ("$c_date"."  $seq_days[3]  "." $d_hello_msg[1]"."\n");
-    push @lunch2_tweet, ("$c_date"."  $seq_days[3]  "." $d_hello_msg[1]"."\n");
-    push @dinner_tweet, ("$c_date"."  $seq_days[3]  "." $d_hello_msg[2]"."\n");
-    today_food(60, 63, 'korean');
-    today_food(64, 67, 'american');
-    today_food(68, 71, 'inter');
-    today_food(72, 75, 'noodle');
-    today_food(76, 79, 'inter2');
+    if ( $seq_days[3] eq $ddd_utf_days[3] ) {
+        push @tweet, ("$c_date"."  $seq_days[3]");
+        push @black_tweet, ("$c_date"."  $seq_days[3]  "." $d_hello_msg[0]"."\n");
+        push @lunch_tweet, ("$c_date"."  $seq_days[3]  "." $d_hello_msg[1]"."\n");
+        push @lunch2_tweet, ("$c_date"."  $seq_days[3]  "." $d_hello_msg[1]"."\n");
+        push @dinner_tweet, ("$c_date"."  $seq_days[3]  "." $d_hello_msg[2]"."\n");
+        today_food(60, 63, 'korean');
+        today_food(64, 67, 'american');
+        today_food(68, 71, 'inter');
+        today_food(72, 75, 'noodle');
+        today_food(76, 79, 'inter2');
+    }
+    else {
+        if ( $seq_days[2] ne $ddd_utf_days[2] ) { 
+            push @tweet, ("$c_date"."  $ddd_utf_days[3]");
+            push @black_tweet, ("$c_date"."  $ddd_utf_days[3]  "." $d_hello_msg[0]"."\n");
+            push @lunch_tweet, ("$c_date"."  $ddd_utf_days[3]  "." $d_hello_msg[1]"."\n");
+            push @lunch2_tweet, ("$c_date"."  $ddd_utf_days[3]  "." $d_hello_msg[1]"."\n");
+            push @dinner_tweet, ("$c_date"."  $ddd_utf_days[3]  "." $d_hello_msg[2]"."\n");
+            today_food(60-20, 63-20, 'korean');
+            today_food(64-20, 67-20, 'american');
+            today_food(68-20, 71-20, 'inter');
+            today_food(72-20, 75-20, 'noodle');
+            today_food(76-20, 79-20, 'inter2');
+        }
+        else {
+            $sw_tweet = 'off';
+        }
+    }
 }
 elsif ( $days[4] eq "$c_date" ) {
-    push @tweet, ("$c_date"."  $seq_days[4]");
-    push @black_tweet, ("$c_date"."  $seq_days[4]  "." $d_hello_msg[0]"."\n");
-    push @lunch_tweet, ("$c_date"."  $seq_days[4]  "." $d_hello_msg[1]"."\n");
-    push @lunch2_tweet, ("$c_date"."  $seq_days[4]  "." $d_hello_msg[1]"."\n");
-    push @dinner_tweet, ("$c_date"."  $seq_days[4]  "." $d_hello_msg[2]"."\n");
-    today_food(80, 83, 'korean');
-    today_food(84, 87, 'american');
-    today_food(88, 91, 'inter');
-    today_food(92, 95, 'noodle');
-    today_food(96, 99, 'inter2');
+    if ( $seq_days[4] eq $ddd_utf_days[4] ) {
+        push @tweet, ("$c_date"."  $seq_days[4]");
+        push @black_tweet, ("$c_date"."  $seq_days[4]  "." $d_hello_msg[0]"."\n");
+        push @lunch_tweet, ("$c_date"."  $seq_days[4]  "." $d_hello_msg[1]"."\n");
+        push @lunch2_tweet, ("$c_date"."  $seq_days[4]  "." $d_hello_msg[1]"."\n");
+        push @dinner_tweet, ("$c_date"."  $seq_days[4]  "." $d_hello_msg[2]"."\n");
+        today_food(80, 83, 'korean');
+        today_food(84, 87, 'american');
+        today_food(88, 91, 'inter');
+        today_food(92, 95, 'noodle');
+        today_food(96, 99, 'inter2');
+    }
+    else {
+        if ( $seq_days[3] ne $ddd_utf_days[3] ) { 
+            push @tweet, ("$c_date"."  $ddd_utf_days[4]");
+            push @black_tweet, ("$c_date"."  $ddd_utf_days[4]  "." $d_hello_msg[0]"."\n");
+            push @lunch_tweet, ("$c_date"."  $ddd_utf_days[4]  "." $d_hello_msg[1]"."\n");
+            push @lunch2_tweet, ("$c_date"."  $ddd_utf_days[4]  "." $d_hello_msg[1]"."\n");
+            push @dinner_tweet, ("$c_date"."  $ddd_utf_days[4]  "." $d_hello_msg[2]"."\n");
+            today_food(80-20, 83-20, 'korean');
+            today_food(84-20, 87-20, 'american');
+            today_food(88-20, 91-20, 'inter');
+            today_food(92-20, 95-20, 'noodle');
+            today_food(96-20, 99-20, 'inter2');
+        }
+        else {
+            $sw_tweet = 'off';
+        }
+    }
 }
 
-my $result = eval { $nt->update("@black_tweet") };
-warn "$@\n" if $@;
+if ( $sw_tweet eq 'on' ) {
+    my $result = eval { $nt->update("@black_tweet") };
+    warn "$@\n" if $@;
+}
+else {
+    my $result = eval { $nt->update("$d_hello_msg[3]") };
+    warn "$@\n" if $@;
+}
 
 sub today_food {
     my ($init_num, $last_num, $menu) = @_;

@@ -175,7 +175,6 @@ elsif ( $days[1] eq "$c_date" ) {
     }
     else {
         if ( $seq_days[0] ne $ddd_utf_days[0] ) { 
-            print "Deffernt 4 \n";
             push @tweet, ("$c_date"."  $ddd_utf_days[1]");
             push @black_tweet, ("$c_date"."  $ddd_utf_days[1]  "." $d_hello_msg[0]"."\n");
             push @lunch_tweet, ("$c_date"."  $ddd_utf_days[1]  "." $d_hello_msg[1]"."\n");
@@ -207,7 +206,6 @@ elsif ( $days[2] eq "$c_date" ) {
     }
     else {
         if ( $seq_days[1] ne $ddd_utf_days[1] ) { 
-            print "Deffernt 4 \n";
             push @tweet, ("$c_date"."  $ddd_utf_days[2]");
             push @black_tweet, ("$c_date"."  $ddd_utf_days[2]  "." $d_hello_msg[0]"."\n");
             push @lunch_tweet, ("$c_date"."  $ddd_utf_days[2]  "." $d_hello_msg[1]"."\n");
@@ -239,7 +237,6 @@ elsif ( $days[3] eq "$c_date") {
     }
     else {
         if ( $seq_days[2] ne $ddd_utf_days[2] ) { 
-            print "Deffernt 3 \n";
             push @tweet, ("$c_date"."  $ddd_utf_days[3]");
             push @black_tweet, ("$c_date"."  $ddd_utf_days[3]  "." $d_hello_msg[0]"."\n");
             push @lunch_tweet, ("$c_date"."  $ddd_utf_days[3]  "." $d_hello_msg[1]"."\n");
@@ -271,7 +268,6 @@ elsif ( $days[4] eq "$c_date" ) {
     }
     else {
         if ( $seq_days[3] ne $ddd_utf_days[3] ) { 
-            print "Deffernt 4 \n";
             push @tweet, ("$c_date"."  $ddd_utf_days[4]");
             push @black_tweet, ("$c_date"."  $ddd_utf_days[4]  "." $d_hello_msg[0]"."\n");
             push @lunch_tweet, ("$c_date"."  $ddd_utf_days[4]  "." $d_hello_msg[1]"."\n");
@@ -289,16 +285,14 @@ elsif ( $days[4] eq "$c_date" ) {
     }
 }
 
-#if ( $sw_tweet eq 'on' ) {
-    #my $result = eval { $nt->update("@dinner_tweet") };
-    #warn "$@\n" if $@;
-#}
-#else {
-#    my $result = eval { $nt->update("$d_hello_msg[3]") };
-#    warn "$@\n" if $@;
-#}
-
-print "@dinner_tweet";
+if ( $sw_tweet eq 'on' ) {
+    my $result = eval { $nt->update("@dinner_tweet") };
+    warn "$@\n" if $@;
+}
+else {
+    my $result = eval { $nt->update("$d_hello_msg[3]") };
+    warn "$@\n" if $@;
+}
 
 sub today_food {
     my ($init_num, $last_num, $menu) = @_;
