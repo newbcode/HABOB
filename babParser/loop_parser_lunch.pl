@@ -1,4 +1,4 @@
-#!/home/newbcode/perl5/perlbrew/perls/perl-5.16.2/bin/perl
+#!/home/newbcode/perl5/perlbrew/perls/perl-5.14.2/bin/perl
 
 use strict;
 use warnings;
@@ -58,7 +58,7 @@ if ( $date_check eq 'Mon' ) {
 
 my $day_p = HTML::TokeParser::Simple->new( $html );
 my (@days, @seq_days, @course, @foods);
-my (@tweet, @black_tweet, @lunch_tweet, @lunch2_tweet, @dinner_tweet, @temp_tweet, @test_tweet);
+my (@tweet, @black_tweet, @lunch_tweet, @lunch2_tweet, @lunch3_tweet, @dinner_tweet, @temp_tweet, @test_tweet);
 my ($first_day, $last_day);
 my $n_date = `date "+%T"`;
 my @nn_date = split /:/, $n_date;
@@ -286,7 +286,11 @@ elsif ( $days[4] eq "$c_date" ) {
 }
 
 if ( $sw_tweet eq 'on' ) {
-    my $result = eval { $nt->update("@black_tweet") };
+    my $result = eval { $nt->update("@lunch_tweet") };
+    warn "$@\n" if $@;
+    $result = eval { $nt->update("@lunch2_tweet") };
+    warn "$@\n" if $@;
+    $result = eval { $nt->update("@lunch3_tweet") };
     warn "$@\n" if $@;
 }
 else {
@@ -310,8 +314,11 @@ sub today_food {
         elsif ( $div == 1 ) {
             push @tweet, ("$menu "."$ddd_today_menu[1] "."$new_foods[$init_num]"."$kcal");
             next if ( $new_foods[$init_num] =~ /^\d+/ );
-            if ( $menu =~ /korean|^inter$/ ) {
+            if ( $menu =~ /^korean/ ) {
                 push @lunch2_tweet, ("$menu "."$ddd_today_menu[1] "."$new_foods[$init_num]"."$kcal\n");
+            }
+            elsif ( $menu =~ /^inter$/ ) {
+                push @lunch3_tweet, ("$menu "."$ddd_today_menu[1] "."$new_foods[$init_num]"."$kcal\n");
             }
             else {
                 push @lunch_tweet, ("$menu "."$ddd_today_menu[1] "."$new_foods[$init_num]"."$kcal\n");
